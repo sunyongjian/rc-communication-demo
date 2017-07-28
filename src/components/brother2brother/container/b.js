@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 
-export default class B extends Component {
+const B = props => (
+  <div className="card">
+    我是Brother B, value是：
+    {props.value}
+  </div>
+);
 
-  render() {
-    return (
-      <div className="card">
-        我是Brother B, value是：
-        {this.props.value}
-      </div>
-    );
-  }
-}
+export default B;

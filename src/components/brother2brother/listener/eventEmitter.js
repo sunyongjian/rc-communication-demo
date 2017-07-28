@@ -1,6 +1,6 @@
 class EventEmitter {
   _event = {}
-  
+
   on(eventName, handle) {
     let listeners = this._event[eventName];
     if(!listeners || !listeners.length) {
@@ -13,15 +13,14 @@ class EventEmitter {
   off(eventName, handle) {
     let listeners = this._event[eventName];
     this._event[eventName] = listeners.filter(l => l !== handle);
-    console.log(this._event[eventName]);
   }
 
   emit(eventName, ...args) {
     const listeners = this._event[eventName];
     if(listeners && listeners.length) {
-      listeners.forEach(l => {
+      for(const l of listeners) {
         l(...args);
-      })
+      }
     }
   }
 }
