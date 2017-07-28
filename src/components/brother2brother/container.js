@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Child from './child';
+import A from './a';
+import B from './b';
 
-export class Parent extends Component {
+export default class Container extends Component {
   constructor() {
     super();
     this.state = {
@@ -9,7 +10,7 @@ export class Parent extends Component {
     }
   }
 
-  setValue = (value) => {
+  setValue = value => {
     this.setState({
       value,
     })
@@ -18,8 +19,8 @@ export class Parent extends Component {
   render() {
     return (
       <div>
-        <div>我是parent, Value是：{this.state.value}</div> 
-        <Child setValue={this.setValue} />
+        <A setValue={this.setValue}/>
+        <B value={this.state.value} />
       </div>
     );
   }

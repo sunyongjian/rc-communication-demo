@@ -12,6 +12,7 @@ module.exports = {
   output: {
     filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'public'),
+    publicPath: config.cdn || '/',
   },
   module: {
     rules: [
@@ -42,7 +43,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: path.resolve(__dirname, 'public'),
+    contentBase: './public',
     port: config.port,
     historyApiFallback: true,
     compress: true,

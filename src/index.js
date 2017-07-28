@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+
+import Routes from './route';
 import './index.less';
 
 class App extends Component {
   render() {
     return (
-      <div>123</div>
+      <div>
+				<Routes />
+      </div>
     );
   }
 }
