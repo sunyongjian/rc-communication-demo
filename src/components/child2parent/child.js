@@ -16,7 +16,7 @@ export default class Child extends Component {
     return (
       <div>
         我是Child<input onChange={this.handleChange} />
-        <div style={{ cursor: 'pointer' }} onClick={this.handleClick}>通知</div>
+        <div className="button" onClick={this.handleClick}>通知</div>
       </div>
     );
   }

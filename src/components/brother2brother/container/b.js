@@ -4,7 +4,7 @@ export default class B extends Component {
 
   render() {
     return (
-      <div>
+      <div className="card">
         我是Brother B, value是：
         {this.props.value}
       </div>

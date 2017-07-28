@@ -24,7 +24,7 @@ export class Parent extends Component {
       <div>
         我是parent
         <input onChange={this.handleChange} />
-        <div style={{ cursor: 'pointer' }} onClick={this.handleClick}>通知</div>
+        <div className="button" onClick={this.handleClick}>通知</div>
         <div>
           <Child value={this.state.value} />
         </div> 

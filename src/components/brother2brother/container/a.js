@@ -13,9 +13,9 @@ export default class A extends Component {
 
   render() {
     return (
-      <div>
+      <div className="card">
         我是Brother A, <input onChange={this.handleChange} />
-        <div style={{ cursor: 'pointer' }} onClick={this.handleClick}>通知</div>
+        <div className="button" onClick={this.handleClick}>通知</div>
       </div>
     )
   }
