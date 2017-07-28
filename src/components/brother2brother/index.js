@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom';
 import Container from './container';
 import Context from './context';
+import Listener from './listener';
 
 export default class Bros extends Component {
 
@@ -21,9 +22,15 @@ export default class Bros extends Component {
               context
             </Link>
           </li>
+          <li>
+            <Link to={`${url}/listener`} >
+              listener
+            </Link>
+          </li>
         </ul>
         <Route path={`${url}/container`} component={Container} />
         <Route path={`${url}/context`} component={Context} />
+        <Route path={`${url}/listener`} component={Listener} />
       </div>
     );
   }
